@@ -26,8 +26,9 @@ public class BankAccount {
       Deposits money into the account.
       @param amount the amount of money to withdraw
    */
-   public void deposit(double amount) {
-      balance = balance + amount;
+   public void deposit(double amount){
+      if (amount > 0)
+         balance = balance + amount;
    }
 
    /** 

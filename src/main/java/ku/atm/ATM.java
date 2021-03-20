@@ -71,7 +71,7 @@ public class ATM {
       (Precondition: state is TRANSACT)
       @param value the amount to deposit
 	 */
-	public void deposit(double value) {
+	public void deposit(double value){
         if (state == TRANSACT) {
             currentAccount.deposit(value);
         }
@@ -89,7 +89,7 @@ public class ATM {
         return -1;
 	}
 
-	public void transfer(int customerNum, double amount) throws NotEnoughBalanceException {
+	public void transfer(int customerNum, double amount) throws NotEnoughBalanceException{
         if (state == TRANSACT) {
             Customer receivingCustomer = theBank.findCustomer(customerNum);
             BankAccount receivingAccount = receivingCustomer.getAccount();
